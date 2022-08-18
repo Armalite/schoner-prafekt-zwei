@@ -1,12 +1,6 @@
 sources = schoner_prafekt_zwei
 
 .PHONY: test format lint unittest coverage pre-commit clean
-test: format lint unittest
-
-format:
-	isort $(sources) tests
-	black $(sources) tests
-
 lint:
 	flake8 $(sources) tests
 
@@ -16,7 +10,7 @@ test:
 coverage:
 	pytest --cov=$(sources) --cov-branch --cov-report=term-missing tests
 
-pre-commit:
+check:
 	pre-commit run --all-files
 
 clean:

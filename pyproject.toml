@@ -23,6 +23,7 @@ packages = [
     { include = "tests", format = "sdist" },
 ]
 
+
 [tool.poetry.dependencies]
 python = ">=3.6.2,<4.0"
 click = "8.0.1"
@@ -68,7 +69,7 @@ doc = [
     ]
 
 [tool.poetry.scripts]
-schoner-prafekt-zwei = 'schoner_prafekt_zwei.cli:main'
+schoner-prafekt-zwei = 'schoner_prafekt_zwei.main:main'
 
 [tool.black]
 line-length = 120
