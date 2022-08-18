@@ -18,3 +18,9 @@ clean:
 	rm -rf *.egg-info
 	rm -rf .tox dist site
 	rm -rf coverage.xml .coverage
+
+run-flow:
+	python -m schoner_prafekt_zwei.main
+
+ui:
+	prefect orion start
